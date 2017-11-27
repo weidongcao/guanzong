@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.rainsoft</groupId>
+    <groupId>com.nebuinfo</groupId>
     <artifactId>guanzong</artifactId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>BeiJingThirdPeriod Maven Webapp</name>
+    <name>管综2.0</name>
     <url>http://maven.apache.org</url>
     <!-- ####################### 环境设置 ###################### -->
     <properties>
@@ -45,7 +45,7 @@
         <!-- Zookeeper 版本 -->
         <zookeeper.version>3.4.5-cdh5.9.3</zookeeper.version>
         <!-- kafka 版本-->
-        <kafka.version>0.10.2.0</kafka.version>
+        <kafka.version>0.9.0.1</kafka.version>
     </properties>
     <!--
      配置Maven的仓库, 在此处配置的仓库会优先于setting.xml里配置的仓库,
@@ -57,11 +57,6 @@
         <repository>
             <id>aliyun</id>
             <url>http://maven.aliyun.com/nexus/content/groups/public</url>
-        </repository>
-        <!-- 国内备选仓库 -->
-        <repository>
-            <id>repo2</id>
-            <url>http://repo2.maven.org/maven2/</url>
         </repository>
 
         <!-- Cloudera仓库,如果在阿里云仓库里找不到去Cloudera的仓库里找，主要是CDH版本Hadoop依赖的jar -->
@@ -75,6 +70,11 @@
             <id>scala-tools.org</id>
             <name>Scala-Tools Maven2 Repository</name>
             <url>http://scala-tools.org/repo-releases</url>
+        </repository>
+        <!-- 国内备选仓库 -->
+        <repository>
+            <id>repo2</id>
+            <url>http://repo2.maven.org/maven2/</url>
         </repository>
     </repositories>
 
