@@ -33,12 +33,12 @@ object ScalaKafkaWordCount {
 
         //以空格进行切分，统计单词个数
         val words = lines.flatMap(_.split(" "))
-        val wordCounts = words.map(key => (key, 1L))
-            .reduceByKey(_ + _)
+        val wordPair = words.map(key => (key, 1L))
+        val wordCounts = wordPair.reduceByKey(_ + _)
 
         //打印
         wordCounts.print()
-
+        wordCounts.saveAsTextFiles("lkasjdf", "salkdjfla")
         //启动
         ssc.start()
         ssc.awaitTermination()
